@@ -1,0 +1,71 @@
+[
+  {
+    "safety": [
+      {
+        "title": "Helmet/Chin Strap"
+      },
+      {
+        "title": "Glasses"
+      },
+      {
+        "title": "Shoe Laces"
+      },
+      {
+        "title": "Gloves"
+      },
+      {
+        "title": "Leg Straps",
+        "subTitle": "Secure and properly adjusted."
+      },
+      {
+        "title": "Chest Strap",
+        "subTitle": "Secure and properly adjusted."
+      },
+      {
+        "title": "Chest Clip",
+        "subTitle": "Secure and properly adjusted."
+      },
+      {
+        "title": "Reserve Handle",
+        "subTitle": "Secure and unobstructed."
+      },
+      {
+        "title": "Risers & Lines",
+        "subTitle": "Clear, untwisted and in good condition."
+      },
+      {
+        "title": "Speed Bar & Lines",
+        "subTitle": "Connected, available with clear lines."
+      },
+      {
+        "title": "Carabiners",
+        "subTitle": "Fastened and properly aligned."
+      },
+      {
+        "title": "Glider",
+        "subTitle": "Properly prepared and in good condition."
+      },
+      {
+        "title": "Radio",
+        "subTitle": "Charged, on and tuned to the correct frequency."
+      },
+      {
+        "title": "Flight Deck",
+        "subTitle": "Secure and properly aligned - instruments on."
+      }
+    ]
+  },
+  {
+    "other": [
+      {
+        "title": "Camera"
+      },
+      {
+        "title": "Pockets"
+      },
+      {
+        "title": "Music"
+      }
+    ]
+  }
+]

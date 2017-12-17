@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <import type="com.davidoddy.parapreflight.model.ChecklistItem" />
+        <import type="com.davidoddy.parapreflight.model.ChecklistViewState" />
+        <import type="com.davidoddy.parapreflight.model.ItemIndexer" />
+
+
+        <variable name="item" type="ChecklistItem" />
+        <variable name="viewState" type="ChecklistViewState" />
+        <variable name="indexer" type="ItemIndexer" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:background="@color/colorChecklistItem"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_check_list">
+
+        <TextView
+                android:id="@+id/indexText"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@{indexer.toString()}"
+                android:visibility="@{viewState.getPaginationVisibility()}"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintWidth_default="wrap"
+                app:layout_constraintHeight_default="wrap"
+                tools:text="1 of 10" />
+
+        <ImageView
+                android:id="@+id/iconImage"
+                android:layout_width="@dimen/icon_size_check_list"
+                android:layout_height="@dimen/icon_size_check_list"
+                android:src="@{viewState.getIconId(item)}"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                tools:srcCompat="@drawable/priority_icon_safety"
+                tools:ignore="ContentDescription" />
+
+        <TextView
+                android:id="@+id/titleText"
+                style="@android:style/TextAppearance.DeviceDefault.Large"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/padding_check_list"
+                android:layout_marginEnd="@dimen/padding_check_list"
+                android:text="@{item.title}"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/subTitleText"
+                app:layout_constraintStart_toEndOf="@+id/iconImage"
+                app:layout_constraintEnd_toStartOf="@+id/indexText"
+                app:layout_constraintHeight_default="wrap"
+                tools:text="Item Title" />
+
+        <TextView
+                android:id="@+id/subTitleText"
+                style="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/padding_check_list"
+                android:layout_marginEnd="@dimen/padding_check_list"
+                android:text="@{item.subTitle}"
+                android:visibility="@{viewState.getTextVisibility(item)}"
+                app:layout_constraintTop_toBottomOf="@+id/titleText"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iconImage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_default="wrap"
+                tools:text="Item Subtitle" />
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

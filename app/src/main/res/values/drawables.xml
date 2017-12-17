@@ -1,0 +1,14 @@
+<resources>
+    <item name="ic_menu_camera" type="drawable">@android:drawable/ic_menu_camera</item>
+    <item name="ic_menu_gallery" type="drawable">@android:drawable/ic_menu_gallery</item>
+    <item name="ic_menu_slideshow" type="drawable">@android:drawable/ic_menu_slideshow</item>
+    <item name="ic_menu_manage" type="drawable">@android:drawable/ic_menu_manage</item>
+    <item name="ic_menu_share" type="drawable">@android:drawable/ic_menu_share</item>
+    <item name="ic_menu_send" type="drawable">@android:drawable/ic_menu_send</item>
+
+
+    // Priority icons
+    <item name="priority_icon_safety" type="drawable">@android:drawable/presence_busy</item>
+    <item name="priority_icon_other" type="drawable">@android:drawable/presence_online</item>
+    <item name="priority_icon_checked" type="drawable">@android:drawable/checkbox_on_background</item>
+</resources>
