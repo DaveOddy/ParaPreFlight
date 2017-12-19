@@ -18,6 +18,7 @@ class ParaPreFlightApplication : Application() {
         super.onCreate()
 
         Timber.plant(Timber.DebugTree())
+
         ParaPreFlightApplication.database = Room.databaseBuilder(this, AppDatabase::class.java, "para-checklist-db").build()
         Thread({
             ParaPreFlightApplication.database?.itemDAO()?.deleteAllItems()

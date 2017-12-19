@@ -101,15 +101,15 @@ class ChecklistViewStateTest {
     }
 
     @Test
-    fun getPaginationVisibility_Returns_Gone_For_Pending_Item() {
+    fun getPaginationVisibility_Returns_Visible_For_Pending_Item() {
         val visibility = ChecklistViewState(ChecklistViewState.State.Pending).getPaginationVisibility()
-        Assert.assertEquals("Wrong pagination visibility", View.GONE, visibility)
+        Assert.assertEquals("Wrong pagination visibility", View.VISIBLE, visibility)
     }
 
     @Test
-    fun getPaginationVisibility_Returns_Gone_For_Checked_Item() {
+    fun getPaginationVisibility_Returns_Visible_For_Checked_Item() {
         val visibility = ChecklistViewState(ChecklistViewState.State.Checked).getPaginationVisibility()
-        Assert.assertEquals("Wrong pagination visibility", View.GONE, visibility)
+        Assert.assertEquals("Wrong pagination visibility", View.VISIBLE, visibility)
     }
 
     @Test

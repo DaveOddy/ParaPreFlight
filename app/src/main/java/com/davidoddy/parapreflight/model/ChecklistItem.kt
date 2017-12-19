@@ -20,11 +20,9 @@ data class ChecklistItem(val category: Category, val ordinal: Int, val title: St
 
 
     override fun toString(): String {
-        return if (this.subTitle == null || this.subTitle.isEmpty()) {
-            this.title
-        }
-        else {
-            "${this.ordinal}) ${this.title} (${this.subTitle})"
-        }
+        val builder = StringBuilder("${this.ordinal}) ${this.title}")
+        if (!this.subTitle.isNullOrBlank())
+            builder.append(" (${this.subTitle})")
+        return builder.toString()
     }
 }

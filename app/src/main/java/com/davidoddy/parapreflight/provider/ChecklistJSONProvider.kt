@@ -76,7 +76,6 @@ class ChecklistJSONProvider(private val jsonReader: JsonReader) : IChecklistProv
         this.jsonReader.beginObject()
         while (this.jsonReader.hasNext()) {
 
-
             val name = this.jsonReader.nextName()
 
             when (name.toLowerCase()) {

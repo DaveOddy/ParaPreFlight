@@ -15,27 +15,27 @@ class ChecklistItemTest {
 
         val toString = ChecklistItem(Category.Safety, 0, title, subTitle).toString()
 
-        Assert.assertEquals("Wrong sub-title format", "TITLE (SUB-TITLE)", toString)
+        Assert.assertEquals("Wrong title/subtitle format", "0) TITLE (SUB-TITLE)", toString)
     }
 
     @Test
-    fun toString_Returns_Properly_Without_Title() {
+    fun toString_Returns_Properly_Without_SubTitle() {
         val title = "TITLE"
         val subTitle = null
 
         val toString = ChecklistItem(Category.Safety, 0, title, subTitle).toString()
 
-        Assert.assertEquals("Wrong sub-title format", "TITLE", toString)
+        Assert.assertEquals("Wrong title-only format", "0) TITLE", toString)
     }
 
     @Test
-    fun toString_Returns_Properly_With_Empty_Title() {
+    fun toString_Returns_Properly_With_Empty_SubTitle() {
         val title = "TITLE"
         val subTitle = ""
 
         val toString = ChecklistItem(Category.Safety, 0, title, subTitle).toString()
 
-        Assert.assertEquals("Wrong sub-title format", "TITLE", toString)
+        Assert.assertEquals("Wrong title-only format", "0) TITLE", toString)
     }
 
     @Test

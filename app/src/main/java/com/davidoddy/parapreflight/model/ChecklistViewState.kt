@@ -16,7 +16,11 @@ data class ChecklistViewState(var state: State) {
                 else -> View.VISIBLE
             }
 
-    fun getPaginationVisibility() = View.VISIBLE
+    fun getPaginationVisibility() =
+            when (this.state) {
+                State.Edit -> View.GONE
+                else -> View.VISIBLE
+            }
 
     fun getIconId(item: ChecklistItem) =
             when {

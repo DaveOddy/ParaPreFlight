@@ -23,19 +23,15 @@ class ChecklistItemView
 
     private var binding: ViewCheckListItemBinding
 
-    private var stashedIconSize: Int? = null
-    private var stashedTitleTextSize: Float? = null
-    private var stashedSubTitleTextSize: Float? = null
-    private var stashedIndexTextSize: Float? = null
+    private var stashedIconSize: Int
+    private var stashedTitleTextSize: Float
+    private var stashedSubTitleTextSize: Float
+    private var stashedIndexTextSize: Float
 
     init {
         val inflater = this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         this.binding = DataBindingUtil.inflate(inflater, R.layout.view_check_list_item,this, true)
-        stashDimensions()
-    }
 
-
-    private fun stashDimensions() {
         this.stashedIconSize = (this.binding.iconImage.layoutParams as ConstraintLayout.LayoutParams).width
         this.stashedTitleTextSize = this.binding.titleText.textSize
         this.stashedSubTitleTextSize = this.binding.subTitleText.textSize

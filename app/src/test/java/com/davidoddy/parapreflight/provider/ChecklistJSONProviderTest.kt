@@ -2,6 +2,7 @@ package com.davidoddy.parapreflight.provider
 
 import android.util.JsonReader
 import com.davidoddy.parapreflight.BuildConfig
+import com.davidoddy.parapreflight.TestApplication
 import com.davidoddy.parapreflight.model.ChecklistItem
 import org.junit.Assert
 import org.junit.Test
@@ -16,7 +17,7 @@ import java.nio.charset.StandardCharsets
  * Created by DOddy on 12/13/17.
  */
 @RunWith(RobolectricTestRunner::class)
-@Config(constants = BuildConfig::class)
+@Config(constants = BuildConfig::class, application = TestApplication::class)
 class ChecklistJSONProviderTest {
 
     @Test
